@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KLAERWERK.con.tc - Home</title>
+  <style>
+    body {
+      background: #f0f0f0 url('https://www.transparenttextures.com/patterns/black-linen.png');
+      font-family: Tahoma, sans-serif;
+      color: #222;
+      margin: 0; padding: 0;
+    }
+    #wrapper {
+      width: 960px; margin: 40px auto;
+      background: #fff; border: 1px solid #ccc;
+      box-shadow: 0 0 20px #aaa;
+    }
+    header {
+      background: linear-gradient(to bottom, #5e5e5e 0%, #333 100%);
+      color: #fff; padding: 20px; text-align: center;
+      border-bottom: 4px solid #1a1a1a; text-shadow: 1px 1px 0 #000;
+    }
+    header h1 { font-size: 36px; margin: 0; letter-spacing: 1px; }
+    header p { margin: 5px 0 0; font-size: 14px; }
+    nav {
+      background: #eaeaea; padding: 10px;
+      border-bottom: 1px solid #ccc; text-align: center;
+    }
+    nav a {
+      margin: 0 12px; text-decoration: none;
+      color: #333; font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    #main { padding: 30px; line-height: 1.6; }
+    .ascii-divider {
+      font-family: monospace; color: #666;
+      font-size: 13px; margin: 30px 0; text-align: center;
+    }
+    .section { margin-top: 30px; }
+    .section h2, .section h3 {
+      font-size: 20px; margin-bottom: 10px;
+      border-bottom: 1px solid #aaa; padding-bottom: 5px;
+    }
+    ul.symbolic-list { list-style: none; padding-left: 0; }
+    ul.symbolic-list li::before { content: "‣ "; color: #444; }
+    .highlight-box {
+      background: #f9f9f9; border: 1px solid #ddd;
+      padding: 15px; margin-bottom: 20px;
+      box-shadow: inset 0 0 5px #ccc;
+    }
+    .button {
+      display: inline-block; background: linear-gradient(to bottom, #6cb2eb 0%, #347ab7 100%);
+      color: #fff; padding: 10px 20px; border: 1px solid #2e6da4;
+      border-radius: 3px; text-decoration: none; font-weight: bold;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+    .button:hover {
+      background: linear-gradient(to bottom, #5faee3 0%, #2f70a0 100%);
+    }
+    code {
+      background: #eee; padding: 2px 5px; font-size: 13px; font-family: monospace;
+    }
+    .build-log {
+      background: #f1f1f1; border: 1px solid #ccc;
+      padding: 10px; font-family: monospace; font-size: 13px;
+      margin-top: 10px;
+    }
+    .project-link {
+      display: block; margin-bottom: 8px;
+      font-family: monospace; color: #224488;
+      text-decoration: none;
+    }
+    .project-link:hover { text-decoration: underline; }
+    footer {
+      background: #333; color: #ccc; font-size: 12px;
+      text-align: center; padding: 15px; border-top: 4px solid #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+    <header>
+      <h1>KLAERWERK.con.tc</h1>
+      <p>Digital Processing ░ Human Simplicity ░ Since 2010</p>
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="#usage">Usage</a>
+      <a href="#projects">Projects</a>
+      <a href="#builds">Builds</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Contact</a>
+      <a href="#legal">Legal</a>
+    </nav>
+
+    <div id="main">
+
+      <div class="highlight-box">
+        <h2>◆ Welcome to Das-Klaerwerk</h2>
+        <p>Your one-stop lab for blunt, no-bloat dev utilities and scripts. All single-file, all functions-first.</p>
+        <a href="#projects" class="button">→ Explore Projects</a>
+      </div>
+
+      <div id="about" class="section">
+        <h2>■ About</h2>
+        <p>Klaerwerk is a personal dev playground started in early 2010. No investors, no hype—just coffee-fueled late-night coding sessions. Tools here are for private use first, then released for the curious. If it breaks your browser in 2010, congrats.</p>
+      </div>
+
+      <div id="features" class="section">
+        <h2>■ Core Features</h2>
+        <ul class="symbolic-list">
+          <li>Easy single-file distribution</li>
+          <li>Minimal dependencies—works in IE8+</li>
+          <li>Offline-ready HTML tools</li>
+          <li>Shell scripts for UNIX devotees</li>
+          <li>Encrypted redirects via GitHub API</li>
+          <li>Mock consoles and dev-themed UIs</li>
+        </ul>
+      </div>
+
+      <div id="install" class="section">
+        <h2>■ Installation</h2>
+        <p>No package manager? No problem:</p>
+        <pre class="build-log">
+  git clone https://github.com/storage4me/klaerwerk.git
+  cd klaerwerk
+  # pick your tool, open directly in browser or terminal
+        </pre>
+        <p>All HTML files run locally; all Fish/Python scripts just <code>chmod +x</code> and execute.</p>
+      </div>
+
+      <div id="usage" class="section">
+        <h2>■ Usage Examples</h2>
+        <h3>a) netlogx.py</h3>
+        <pre class="build-log">
+  # monitor network (no logs)
+  python3 netlogx.py --status
+        </pre>
+        <h3>b) bf.fish</h3>
+        <pre class="build-log">
+  # search files, show ASCII table
+  ./bf.fish 0 report.pdf /home/user/docs
+        </pre>
+        <h3>c) secure-redirect.html</h3>
+        <p>Open in browser, drop link, get encrypted GitHub redirect URL.</p>
+      </div>
+
+      <div id="projects" class="section">
+        <h2>■ Core Projects</h2>
+        <a class="project-link" href="#">▶ netlogx.py</a>
+        <a class="project-link" href="#">▶ hashserve.html</a>
+        <a class="project-link" href="#">▶ bf.fish</a>
+        <a class="project-link" href="#">▶ secure-redirect.html</a>
+        <a class="project-link" href="#">▶ chat-sim.html</a>
+        <a class="project-link" href="#">▶ factory-reset.sh</a>
+      </div>
+
+      <div id="builds" class="section">
+        <h2>■ Extended Build Log</h2>
+        <div class="build-log">
+          [2025-07-02] ▼ netlogx.py v1.4   IPv6 support added<br>
+          [2025-06-30] ▼ hashserve.html v0.9   drag/drop + SHA256, SHA512<br>
+          [2025-06-28] ▼ bf.fish v2.1   wildcards + ASCII output table<br>
+          [2025-06-26] ▼ secure-redirect.html v1.2   token auto-detect<br>
+          [2025-06-24] ▼ chat-sim.html v0.5   fake AI console UI<br>
+          [2025-06-20] ▼ factory-reset.sh v3.4   safer prompts, dry-run mode<br>
+          [2025-06-15] ▼ initial repo scaffolding and readme<br>
+        </div>
+      </div>
+
+      <div id="roadmap" class="section">
+        <h2>■ Roadmap</h2>
+        <ul class="symbolic-list">
+          <li>▸ netlogx: live graph mode</li>
+          <li>▸ hashserve: WebAssembly version</li>
+          <li>▸ bf: add color-coded permissions</li>
+          <li>▸ redirect: mobile-friendly UI</li>
+          <li>▸ new: markdown-to-html static blog tool</li>
+        </ul>
+      </div>
+
+      <div id="faq" class="section">
+        <h2>■ FAQ</h2>
+        <h3>Q: Why single-file only?</h3>
+        <p>A: Legacy simplicity. Clone, open, run—no install hell.</p>
+        <h3>Q: Is this secure?</h3>
+        <p>A: Use at your own risk. We assume you know your own network.</p>
+        <h3>Q: Any support?</h3>
+        <p>A: Issues? Fork it, fix it, send a PR. No promises.</p>
+      </div>
+
+      <div id="community" class="section">
+        <h2>■ Community & Links</h2>
+        <ul class="symbolic-list">
+          <li>GitHub: <a href="https://github.com/storage4me/klaerwerk">storage4me/klaerwerk</a></li>
+          <li>Issues: <a href="https://github.com/storage4me/klaerwerk/issues">Submit bugs or PRs</a></li>
+          <li>Wiki: <a href="https://github.com/storage4me/klaerwerk/wiki">Project wiki</a></li>
+          <li>Mailing List: <code>devs@klaerwerk.con.tc</code> (no spam, we promise)</li>
+        </ul>
+      </div>
+
+      <div id="contact" class="section">
+        <h2>■ Contact</h2>
+        <p>Email: <code>mr0doe@german.dev.tc</code></p>
+        <p>PGP Key: <code>0xDEADBEEFCAFEBABE</code> (verify before sending secrets)</p>
+      </div>
+
+      <div id="legal" class="section">
+        <h2>■ Legal</h2>
+        <p>All code under MIT License. See <a href="#">LICENSE.txt</a>.</p>
+        <p>No warranties, express or implied. Break it, fix it, own it.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      &copy; 2010-2025 KLAERWERK.con.tc   Powered by caffeine and single-file obsession
+    </footer>
+  </div>
+
+  <script>
+    console.log(">> KLAERWERK loaded. No emojis, only raw unicode vibes.");
+  </script>
+
+</body>
+</html>
